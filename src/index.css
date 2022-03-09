@@ -1,13 +1,137 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: #fff;
+}
+
+.section-center {
+  max-width: 540px;
+  margin: 0 auto;
+}
+.header {
+  padding: 48px 24px 45px 24px;
+  background: url("./assets/bg-mobile-light.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header.dark {
+  background: url("./assets/bg-mobile-dark.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.header-nav button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.form-input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 14px 0 14px 20px;
+  border-radius: 5px;
+}
+
+.form-input.dark {
+  background-color: #25273d;
+}
+
+.form-input input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  line-height: 18px;
+  margin-left: 12px;
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  background: transparent;
+}
+
+.form-input-input.dark {
+  color: #c8cbe7;
+}
+
+.form-input input::placeholder {
+  font-size: 1.2rem;
+  line-height: 12px;
+  letter-spacing: -0.17px;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e3e4f1;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.main {
+  background-color: #f2f2f2;
+  min-height: calc(100vh - 164px);
+}
+
+.main.dark {
+  background-color: #171823;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .header {
+    background: url("./assets/bg-desktop-light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 24px 80px 24px;
+  }
+
+  .header.dark {
+    background: url("./assets/bg-desktop-dark.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .form-input {
+    padding: 20px 0 20px 24px;
+    border-radius: 5px;
+  }
+
+  .form-input input::placeholder {
+    font-size: 1.8rem;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+  }
 }
